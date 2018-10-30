@@ -1,5 +1,5 @@
 {
-    "name": "tutorial",
+    "name": "data-management-backend",
     "scripts": {
         "start": "npm run seed && npm run serve",
         "serve": "node dist/server.js",
