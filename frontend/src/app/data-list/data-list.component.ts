@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import Data from '../common/domain/data';
 import DataService from '../common/service/data.service';
+import { NgModel } from '@angular/forms';
 
 @Component({
     selector: 'data-list',

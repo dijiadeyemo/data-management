@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import Data from '../data';
+import Data from '../domain/data';
 
 @Pipe({ name: 'sortByField' })
 export class SortByFieldPipe implements PipeTransform {
