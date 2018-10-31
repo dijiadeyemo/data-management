@@ -1,5 +1,5 @@
-import IDataRepository from "../repositories/IDataRepository";
-import Data from "../models/data";
+import IDataRepository from "../Repositories/IDataRepository";
+import Data from "../Models/Data";
 import { inject, injectable } from "inversify";
 import ServiceIdentifier from "../Constants/ServiceIdentifier";
 

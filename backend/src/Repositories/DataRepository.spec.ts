@@ -2,7 +2,6 @@ import "reflect-metadata";
 import DataRepository from "./DataRepository";
 import { QueryResult, Client } from "pg";
 import Query from "./Query";
-import Data from "../models/Data";
 
 describe("DataRepository", () => {
     const mockData = [

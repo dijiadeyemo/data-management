@@ -1,0 +1,33 @@
+version: '3'
+services:
+  frontend:
+    image: "node:8"
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./frontend:/home/node/app
+    ports:
+      - "8080:8080"
+    command: "npm start"
+  backend:
+    image: "node:8"
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=development
+      - PGUSER=postgres
+      - PGDATABASE=postgres
+      - PGPASSWORD=example
+      - PGHOST=db
+    volumes:
+      - ./backend:/home/node/app
+    ports:
+      - "3000:3000"
+    command: /bin/sh -c "npm run build && npm start"
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example

@@ -24,6 +24,7 @@ app.use(function (req: Request, res: Response, next: () => any) {
 });
 
 app.set("port", process.env.PORT || 3000);
+app.set("host", process.env.HOST || "0.0.0.0");
 
 app.get("/data", (request: Request, response: Response) => {
     dataController.get(request, response);

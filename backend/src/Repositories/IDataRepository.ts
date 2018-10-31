@@ -1,4 +1,4 @@
-import Data from "../models/Data";
+import Data from "../Models/Data";
 
 interface IDataRepository {
 

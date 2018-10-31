@@ -2,7 +2,7 @@ import { injectable, inject } from "inversify";
 import { Client } from "pg";
 import IDataRepository from "./IDataRepository";
 import Query from "./Query";
-import Data from "../models/Data";
+import Data from "../Models/Data";
 import ServiceIdentifier from "../Constants/ServiceIdentifier";
 
 @injectable()
