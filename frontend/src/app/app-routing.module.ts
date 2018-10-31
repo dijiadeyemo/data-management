@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import DataManagerComponent from './data-manager/data-manager.component';
+
+const routes: Routes = [
+  {path: 'data', component: DataManagerComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
