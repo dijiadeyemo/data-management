@@ -33,9 +33,7 @@ class DataListComponent implements OnInit {
     }
 
     sortData(field: string) {
-        console.log('sorting', field);
         this.sortField = field;
-        console.log('sorting field', this.sortField);
     }
 
 }
