@@ -71,7 +71,7 @@ describe("DataRepository", () => {
             const repository = new DataRepository(new MockClient());
             const data = await repository.getById(1);
 
-            expect(data).toBeNull();
+            expect(data).toBeUndefined();
         });
     });
 
@@ -120,12 +120,12 @@ describe("DataRepository", () => {
 
             expect(clientInstance.query).toBeCalledWith(Query.DATA_INSERT, [
                 1,
+                "Neftegorsk",
                 new Date("2013-04-12T23:00:00.000Z"),
                 new Date("2013-05-17T23:00:00.000Z"),
-                "Neftegorsk",
-                "#fd4e19",
                 "55.82",
                 "Seldom",
+                "#fd4e19",
             ]);
         });
 
@@ -143,12 +143,12 @@ describe("DataRepository", () => {
             await repository.update(mockData[0]);
 
             expect(clientInstance.query).toBeCalledWith(Query.DATA_UPDATE, [
+                "Neftegorsk",
                 new Date("2013-04-12T23:00:00.000Z"),
                 new Date("2013-05-17T23:00:00.000Z"),
-                "Neftegorsk",
-                "#fd4e19",
                 "55.82",
                 "Seldom",
+                "#fd4e19",
                 1
             ]);
         });
